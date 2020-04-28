@@ -17,11 +17,17 @@ public class UserService {
     @Autowired
     UserRepository repository;
 
-    @Transactional(isolation = Isolation.SERIALIZABLE)
-    public synchronized void addIfUserNotExist(UserInfo userInfo) throws IllegalArgumentException {
-        Optional<UserInfo> byUsername = repository.findByLogin(userInfo.getLogin());
-        byUsername.ifPresent(s->{throw new IllegalArgumentException("User with name "+ userInfo.getUsername()+" already exist");});
-        repository.insert(userInfo);
+    public synchronized void addIfUserNotExist(UserInfo userInfo){
+        Optional<UserInfo> byUsername = Optional.empty();
+        try {
+             byUsername = repository.findByLogin(userInfo.getLogin());
+        }catch (Exception e){
+            System.out.println("EXCEPTION"+ e.getMessage());
+        }
+        if(byUsername.isEmpty()){
+            System.out.println("ADD USER");
+            repository.insert(userInfo);
+        };
     }
 
 }

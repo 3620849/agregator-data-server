@@ -14,6 +14,7 @@ import org.springframework.web.context.request.WebRequest;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -42,7 +43,7 @@ public class TstController {
     public ResponseEntity getUsers(@RequestBody UserInfo userInfo){
         try {
             userService.addIfUserNotExist(userInfo);
-        }catch (IllegalArgumentException e){
+        }catch (Exception e){
             LOGGER.error(e.getMessage());
            return new ResponseEntity(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
@@ -51,16 +52,10 @@ public class TstController {
     //getUserByLogin
     @RequestMapping(value = "/getUserByLogin/{login}",method = RequestMethod.GET)
     public ResponseEntity<UserInfo> getUsersByLogin(@PathVariable("login")String login){
-        UserInfo user =  repository.findByLogin(login).orElseThrow(() -> new RecordNotFoundException("no such user"));
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        Optional<UserInfo> oUser =  repository.findByLogin(login);
+        if(oUser.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        };
+        return new ResponseEntity<>(oUser.get(), HttpStatus.OK);
     }
-
-//    @ExceptionHandler(RecordNotFoundException.class)
-//    public final ResponseEntity<Object> handleRecordNotFoundException(RecordNotFoundException ex, WebRequest request) {
-//        List<String> details = new ArrayList<>();
-//        details.add(ex.getLocalizedMessage());
-//        ErrorResponse error = new ErrorResponse("Record Not Found", details);
-//        return new ResponseEntity(error, HttpStatus.NOT_FOUND);
-//    }
-
 }

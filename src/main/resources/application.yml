@@ -1,3 +1,8 @@
+logging:
+  level:
+    org.springframework: ERROR
+    com.weiss.weissdata: INFO
+  file: weis-data.log
 server:
   port: 8082
 spring:

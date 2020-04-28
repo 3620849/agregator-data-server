@@ -14,20 +14,25 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableMongoRepositories(basePackages = "com.weiss.weissdata.repository")
 @Configuration
-public class AppConfig extends AbstractMongoClientConfiguration {
-
-    @Override
-    protected String getDatabaseName() {
-        return "test";
-    }
-
-    @Override
-    public MongoClient mongoClient() {
-        return MongoClients.create("mongodb://localhost:27017/?replicaSet=rs0&w=majority");
-    }
-    @Bean
-    MongoTransactionManager transactionManager(MongoDbFactory dbFactory) {
-        return new MongoTransactionManager(dbFactory);
-    }
+public class AppConfig {
 
 }
+//@EnableMongoRepositories(basePackages = "com.weiss.weissdata.repository")
+//@Configuration
+//public class AppConfig extends AbstractMongoClientConfiguration {
+//
+//    @Override
+//    protected String getDatabaseName() {
+//        return "test";
+//    }
+//
+//    @Override
+//    public MongoClient mongoClient() {
+//        return MongoClients.create("mongodb://localhost:27017/?replicaSet=rs0&w=majority");
+//    }
+//    @Bean
+//    MongoTransactionManager transactionManager(MongoDbFactory dbFactory) {
+//        return new MongoTransactionManager(dbFactory);
+//    }
+//
+//}
