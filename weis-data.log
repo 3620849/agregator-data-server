@@ -1,14 +1,981 @@
-2020-04-29 00:00:27.850  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:05:27.881  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:10:27.883  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:15:27.886  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:20:27.890  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:25:27.893  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:30:27.896  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:35:27.898  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:40:27.900  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:45:27.902  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:50:27.906  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 00:55:27.909  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 01:00:27.911  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-04-29 01:05:27.915  INFO 7056 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:00:28.613  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:05:28.661  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:10:28.663  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:15:28.666  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:20:28.668  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:25:28.670  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:30:28.673  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:35:28.714  INFO 5584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:39:32.647  WARN 5584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588455572647, current=DOWN, previous=UP]
+2020-05-03 00:39:32.648  INFO 5584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 00:39:32.681 ERROR 5584 --- [http-nio-8082-exec-10] c.w.w.controllers.NominationController   : Error creating bean with name 'refreshEventListener': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-05-03 00:39:32.693  INFO 5584 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:49}] to localhost:27017 because the pool has been closed.
+2020-05-03 00:39:32.698  INFO 5584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 00:39:32.713  INFO 5584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 00:39:32.715  INFO 5584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 00:39:32.726  INFO 5584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 00:39:32.746  INFO 5584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 00:39:55.113  INFO 8448 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 00:39:58.815  INFO 8448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 00:39:58.816  INFO 8448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 00:39:59.184  INFO 8448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 00:39:59.775  INFO 8448 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 00:39:59.775  INFO 8448 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 00:39:59.913  INFO 8448 --- [cluster-ClusterId{value='5eade8afc944dd3585b782f3', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:50}] to localhost:27017
+2020-05-03 00:39:59.926  INFO 8448 --- [cluster-ClusterId{value='5eade8afc944dd3585b782f3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6531400}
+2020-05-03 00:39:59.931  INFO 8448 --- [cluster-ClusterId{value='5eade8afc944dd3585b782f3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 00:40:00.838  WARN 8448 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 00:40:00.839  INFO 8448 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 00:40:00.850  WARN 8448 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 00:40:00.851  INFO 8448 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 00:40:03.215  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 00:40:03.396  INFO 8448 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 00:40:03.397  INFO 8448 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 00:40:03.710  INFO 8448 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 00:40:03.711  INFO 8448 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 00:40:04.109  INFO 8448 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:40:04.316  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 00:40:04.316  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 00:40:04.316  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 00:40:04.316  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 00:40:04.317  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 00:40:04.317  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 00:40:04.317  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 00:40:04.593  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 00:40:04.598  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 00:40:04.602  INFO 8448 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 00:40:04.609  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588455604607 with initial instances count: 1
+2020-05-03 00:40:04.612  INFO 8448 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588455604612, current=UP, previous=STARTING]
+2020-05-03 00:40:04.619  INFO 8448 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 00:40:04.685  INFO 8448 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 00:40:05.184  INFO 8448 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.632 seconds (JVM running for 15.848)
+2020-05-03 00:41:32.789  INFO 8448 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 00:41:32.934  INFO 8448 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:51}] to localhost:27017
+2020-05-03 00:42:14.018 ERROR 8448 --- [http-nio-8082-exec-2] c.w.w.controllers.MessageController      : No property '2@2359d36c' found on class com.weiss.weissdata.model.forum.Message! Did you mean: ?
+2020-05-03 00:45:04.324  INFO 8448 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:50:04.326  INFO 8448 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 00:55:27.373  INFO 8448 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:03:35.215  INFO 8448 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:03:35.268 ERROR 8448 --- [http-nio-8082-exec-7] c.w.w.controllers.MessageController      : No property '2@23d12fe8' found on class com.weiss.weissdata.model.forum.Message! Did you mean: ?
+2020-05-03 01:08:35.238  INFO 8448 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:08:51.754  WARN 8448 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588457331754, current=DOWN, previous=UP]
+2020-05-03 01:08:51.754  INFO 8448 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:08:51.762  INFO 8448 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:08:51.768  INFO 8448 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:51}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:08:51.772  INFO 8448 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:08:54.775  INFO 8448 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:08:54.792  INFO 8448 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:08:54.817  INFO 8448 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:09:08.544  INFO 18452 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:09:12.081  INFO 18452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:09:12.081  INFO 18452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:09:12.562  INFO 18452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:09:13.678  INFO 18452 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:09:13.680  INFO 18452 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:09:14.041  INFO 18452 --- [cluster-ClusterId{value='5eadef89b7fcbd03c5308afd', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:52}] to localhost:27017
+2020-05-03 01:09:14.071  INFO 18452 --- [cluster-ClusterId{value='5eadef89b7fcbd03c5308afd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13501300}
+2020-05-03 01:09:14.074  INFO 18452 --- [cluster-ClusterId{value='5eadef89b7fcbd03c5308afd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:09:15.257  WARN 18452 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:09:15.258  INFO 18452 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:09:15.271  WARN 18452 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:09:15.272  INFO 18452 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:09:17.812  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:09:18.035  INFO 18452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:09:18.038  INFO 18452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:09:18.611  INFO 18452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:09:18.612  INFO 18452 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:09:19.157  INFO 18452 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:09:19.563  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:09:19.564  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:09:19.564  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:09:19.564  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:09:19.564  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:09:19.564  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:09:19.565  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:09:20.004  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:09:20.009  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:09:20.038  INFO 18452 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:09:20.046  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588457360044 with initial instances count: 1
+2020-05-03 01:09:20.048  INFO 18452 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588457360048, current=UP, previous=STARTING]
+2020-05-03 01:09:20.053  INFO 18452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:09:20.120  INFO 18452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:09:20.611  INFO 18452 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 15.257 seconds (JVM running for 16.682)
+2020-05-03 01:09:27.445  INFO 18452 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:09:27.605  INFO 18452 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:53}] to localhost:27017
+2020-05-03 01:14:19.568  INFO 18452 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:19:19.572  INFO 18452 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:20:37.073  WARN 18452 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458037073, current=DOWN, previous=UP]
+2020-05-03 01:20:37.074  INFO 18452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:20:37.084  INFO 18452 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:20:37.092  INFO 18452 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:53}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:20:37.098  INFO 18452 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:20:40.102  INFO 18452 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:20:40.113  INFO 18452 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:20:40.148  INFO 18452 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:20:53.803  INFO 20052 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:20:57.554  INFO 20052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:20:57.555  INFO 20052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:20:57.958  INFO 20052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:20:58.624  INFO 20052 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:20:58.624  INFO 20052 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:20:58.765  INFO 20052 --- [cluster-ClusterId{value='5eadf24a99430c68ecf7def6', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:54}] to localhost:27017
+2020-05-03 01:20:58.781  INFO 20052 --- [cluster-ClusterId{value='5eadf24a99430c68ecf7def6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10514299}
+2020-05-03 01:20:58.787  INFO 20052 --- [cluster-ClusterId{value='5eadf24a99430c68ecf7def6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:20:59.616  WARN 20052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:20:59.617  INFO 20052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:20:59.627  WARN 20052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:20:59.627  INFO 20052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:21:02.134  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:21:02.392  INFO 20052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:21:02.393  INFO 20052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:21:02.759  INFO 20052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:21:02.759  INFO 20052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:21:03.148  INFO 20052 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:21:03.442  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:21:03.443  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:21:03.734  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:21:03.741  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:21:03.745  INFO 20052 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:21:03.751  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588458063749 with initial instances count: 1
+2020-05-03 01:21:03.755  INFO 20052 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458063755, current=UP, previous=STARTING]
+2020-05-03 01:21:03.758  INFO 20052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:21:03.836  INFO 20052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:21:04.455  INFO 20052 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.788 seconds (JVM running for 15.394)
+2020-05-03 01:21:09.587  INFO 20052 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:21:09.743  INFO 20052 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:55}] to localhost:27017
+2020-05-03 01:22:58.196  WARN 20052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458178196, current=DOWN, previous=UP]
+2020-05-03 01:22:58.204  INFO 20052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:22:58.211  INFO 20052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:22:58.218  INFO 20052 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:55}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:22:58.223  INFO 20052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:23:01.227  INFO 20052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:23:01.238  INFO 20052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:23:01.279  INFO 20052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:23:14.398  INFO 6052 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:23:17.568  INFO 6052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:23:17.569  INFO 6052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:23:17.950  INFO 6052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:23:18.583  INFO 6052 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:23:18.584  INFO 6052 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:23:18.723  INFO 6052 --- [cluster-ClusterId{value='5eadf2d63709f22a6a4fcd7b', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:56}] to localhost:27017
+2020-05-03 01:23:18.735  INFO 6052 --- [cluster-ClusterId{value='5eadf2d63709f22a6a4fcd7b', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5432600}
+2020-05-03 01:23:18.738  INFO 6052 --- [cluster-ClusterId{value='5eadf2d63709f22a6a4fcd7b', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:23:19.561  WARN 6052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:23:19.562  INFO 6052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:23:19.573  WARN 6052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:23:19.574  INFO 6052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:23:21.901  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:23:22.090  INFO 6052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:23:22.090  INFO 6052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:23:22.421  INFO 6052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:23:22.421  INFO 6052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:23:22.862  INFO 6052 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:23:23.144  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:23:23.145  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:23:23.145  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:23:23.145  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:23:23.145  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:23:23.146  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:23:23.146  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:23:23.527  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:23:23.532  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:23:23.537  INFO 6052 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:23:23.546  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588458203544 with initial instances count: 1
+2020-05-03 01:23:23.551  INFO 6052 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458203550, current=UP, previous=STARTING]
+2020-05-03 01:23:23.557  INFO 6052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:23:23.674  INFO 6052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:23:24.287  INFO 6052 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.264 seconds (JVM running for 14.832)
+2020-05-03 01:23:32.777  INFO 6052 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:23:32.913  INFO 6052 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:57}] to localhost:27017
+2020-05-03 01:23:34.716 ERROR 6052 --- [http-nio-8082-exec-2] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 01:28:23.151  INFO 6052 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:33:16.314  WARN 6052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458796314, current=DOWN, previous=UP]
+2020-05-03 01:33:16.315  INFO 6052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:33:16.321  INFO 6052 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:33:16.327  INFO 6052 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:57}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:33:16.330  INFO 6052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:33:19.333  INFO 6052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:33:19.339  INFO 6052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:33:19.364  INFO 6052 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:33:44.744  INFO 23124 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:33:48.038  INFO 23124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:33:48.039  INFO 23124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:33:48.469  INFO 23124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:33:49.079  INFO 23124 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:33:49.079  INFO 23124 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:33:49.223  INFO 23124 --- [cluster-ClusterId{value='5eadf54d3fd0684406df9534', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:58}] to localhost:27017
+2020-05-03 01:33:49.236  INFO 23124 --- [cluster-ClusterId{value='5eadf54d3fd0684406df9534', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5948700}
+2020-05-03 01:33:49.268  INFO 23124 --- [cluster-ClusterId{value='5eadf54d3fd0684406df9534', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:33:50.093  WARN 23124 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:33:50.094  INFO 23124 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:33:50.107  WARN 23124 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:33:50.108  INFO 23124 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:33:52.560  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:33:52.794  INFO 23124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:33:52.795  INFO 23124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:33:53.251  INFO 23124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:33:53.252  INFO 23124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:33:53.709  INFO 23124 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:33:54.055  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:33:54.056  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:33:54.056  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:33:54.056  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:33:54.056  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:33:54.057  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:33:54.057  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:33:54.422  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:33:54.426  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:33:54.432  INFO 23124 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:33:54.440  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588458834438 with initial instances count: 1
+2020-05-03 01:33:54.444  INFO 23124 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588458834443, current=UP, previous=STARTING]
+2020-05-03 01:33:54.453  INFO 23124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:33:54.529  INFO 23124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:33:55.063  INFO 23124 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.426 seconds (JVM running for 14.887)
+2020-05-03 01:34:01.979  INFO 23124 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:34:02.136  INFO 23124 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:59}] to localhost:27017
+2020-05-03 01:34:02.175 ERROR 23124 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 01:41:11.486  INFO 23124 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:41:11.495 ERROR 23124 --- [http-nio-8082-exec-6] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 01:43:40.137  WARN 23124 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588459420137, current=DOWN, previous=UP]
+2020-05-03 01:43:40.138  INFO 23124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:43:40.145  INFO 23124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:43:40.153  INFO 23124 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:59}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:43:40.157  INFO 23124 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:43:43.161  WARN 23124 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-05-03 01:43:43.161  INFO 23124 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:43:43.168  INFO 23124 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:43:43.200  INFO 23124 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:43:55.638  INFO 21156 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:43:58.804  INFO 21156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:43:58.805  INFO 21156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:43:59.165  INFO 21156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:43:59.827  INFO 21156 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:43:59.827  INFO 21156 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:43:59.990  INFO 21156 --- [cluster-ClusterId{value='5eadf7af96fee6146e4c79cc', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:60}] to localhost:27017
+2020-05-03 01:44:00.007  INFO 21156 --- [cluster-ClusterId{value='5eadf7af96fee6146e4c79cc', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8379100}
+2020-05-03 01:44:00.009  INFO 21156 --- [cluster-ClusterId{value='5eadf7af96fee6146e4c79cc', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:44:00.998  WARN 21156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:44:00.998  INFO 21156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:44:01.013  WARN 21156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:44:01.014  INFO 21156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:44:03.383  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:44:03.569  INFO 21156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:44:03.569  INFO 21156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:44:03.956  INFO 21156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:44:03.956  INFO 21156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:44:04.313  INFO 21156 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:44:04.582  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:44:04.583  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:44:04.584  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:44:04.584  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:44:04.585  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:44:04.585  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:44:04.585  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:44:04.939  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:44:04.943  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:44:04.947  INFO 21156 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:44:04.955  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588459444952 with initial instances count: 1
+2020-05-03 01:44:04.959  INFO 21156 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588459444959, current=UP, previous=STARTING]
+2020-05-03 01:44:04.964  INFO 21156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:44:05.036  INFO 21156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:44:05.737  INFO 21156 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.461 seconds (JVM running for 15.226)
+2020-05-03 01:44:11.080  INFO 21156 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:46:53.021  INFO 21156 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:61}] to localhost:27017
+2020-05-03 01:46:53.036  INFO 21156 --- [http-nio-8082-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:62}] to localhost:27017
+2020-05-03 01:46:53.047 ERROR 21156 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 01:49:04.592  INFO 21156 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:49:40.179  WARN 21156 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588459780179, current=DOWN, previous=UP]
+2020-05-03 01:49:40.181  INFO 21156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:49:40.202  INFO 21156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:49:40.208  INFO 21156 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:61}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:49:40.210  INFO 21156 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:62}] to localhost:27017 because the pool has been closed.
+2020-05-03 01:49:40.216  INFO 21156 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 01:49:43.219  INFO 21156 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 01:49:43.227  INFO 21156 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 01:49:43.248  INFO 21156 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 01:51:34.630  INFO 12384 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 01:51:37.807  INFO 12384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 01:51:37.808  INFO 12384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 01:51:38.186  INFO 12384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 01:51:38.906  INFO 12384 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 01:51:38.908  INFO 12384 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 01:51:39.063  INFO 12384 --- [cluster-ClusterId{value='5eadf97a70c2103153e485a9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:63}] to localhost:27017
+2020-05-03 01:51:39.076  INFO 12384 --- [cluster-ClusterId{value='5eadf97a70c2103153e485a9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7190601}
+2020-05-03 01:51:39.079  INFO 12384 --- [cluster-ClusterId{value='5eadf97a70c2103153e485a9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 01:51:39.900  WARN 12384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:51:39.901  INFO 12384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:51:39.915  WARN 12384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 01:51:39.915  INFO 12384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 01:51:42.570  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 01:51:42.816  INFO 12384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 01:51:42.817  INFO 12384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 01:51:43.174  INFO 12384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 01:51:43.175  INFO 12384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 01:51:43.532  INFO 12384 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 01:51:43.788  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 01:51:43.789  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 01:51:43.789  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 01:51:43.789  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 01:51:43.789  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 01:51:43.789  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 01:51:43.790  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 01:51:44.183  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 01:51:44.187  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 01:51:44.195  INFO 12384 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 01:51:44.203  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588459904200 with initial instances count: 1
+2020-05-03 01:51:44.207  INFO 12384 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588459904207, current=UP, previous=STARTING]
+2020-05-03 01:51:44.212  INFO 12384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 01:51:44.282  INFO 12384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 01:51:44.752  INFO 12384 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.39 seconds (JVM running for 15.035)
+2020-05-03 01:51:56.280  INFO 12384 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 01:52:00.747  INFO 12384 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:64}] to localhost:27017
+2020-05-03 01:52:00.763 ERROR 12384 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 01:56:43.795  INFO 12384 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:01:43.796  INFO 12384 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:06:43.799  INFO 12384 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:11:43.800  INFO 12384 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:13:47.495  WARN 12384 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461227495, current=DOWN, previous=UP]
+2020-05-03 02:13:47.496  INFO 12384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:13:47.501  INFO 12384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:13:47.508  INFO 12384 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:64}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:13:47.513  INFO 12384 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:13:50.516  INFO 12384 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:13:50.529  INFO 12384 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:13:50.573  INFO 12384 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:14:03.188  INFO 9180 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:14:06.605  INFO 9180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:14:06.606  INFO 9180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:14:06.979  INFO 9180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:14:07.592  INFO 9180 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:14:07.593  INFO 9180 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:14:07.744  INFO 9180 --- [cluster-ClusterId{value='5eadfebfa7c9cc018e57d4b1', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:65}] to localhost:27017
+2020-05-03 02:14:07.757  INFO 9180 --- [cluster-ClusterId{value='5eadfebfa7c9cc018e57d4b1', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6432601}
+2020-05-03 02:14:07.762  INFO 9180 --- [cluster-ClusterId{value='5eadfebfa7c9cc018e57d4b1', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:14:08.622  WARN 9180 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:14:08.622  INFO 9180 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:14:08.632  WARN 9180 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:14:08.633  INFO 9180 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:14:11.012  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:14:11.203  INFO 9180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:14:11.204  INFO 9180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:14:11.591  INFO 9180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:14:11.592  INFO 9180 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:14:11.967  INFO 9180 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:14:12.255  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:14:12.255  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:14:12.255  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:14:12.256  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:14:12.256  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:14:12.256  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:14:12.256  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:14:12.587  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:14:12.593  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:14:12.598  INFO 9180 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:14:12.605  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588461252603 with initial instances count: 2
+2020-05-03 02:14:12.608  INFO 9180 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461252608, current=UP, previous=STARTING]
+2020-05-03 02:14:12.614  INFO 9180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:14:12.689  INFO 9180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:14:13.237  INFO 9180 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.558 seconds (JVM running for 14.989)
+2020-05-03 02:14:20.635  INFO 9180 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:14:25.670  INFO 9180 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:66}] to localhost:27017
+2020-05-03 02:14:25.715 ERROR 9180 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:17:52.193  WARN 9180 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461472193, current=DOWN, previous=UP]
+2020-05-03 02:17:52.194  INFO 9180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:17:52.201  INFO 9180 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:17:52.207  INFO 9180 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:66}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:17:52.211  INFO 9180 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:17:55.214  INFO 9180 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:17:55.220  INFO 9180 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:17:55.240  INFO 9180 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:18:08.655  INFO 8704 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:18:12.362  INFO 8704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:18:12.363  INFO 8704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:18:12.900  INFO 8704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:18:13.576  INFO 8704 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:18:13.577  INFO 8704 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:18:13.732  INFO 8704 --- [cluster-ClusterId{value='5eadffb58e2d163d8c5271ca', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:67}] to localhost:27017
+2020-05-03 02:18:13.749  INFO 8704 --- [cluster-ClusterId{value='5eadffb58e2d163d8c5271ca', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7863001}
+2020-05-03 02:18:13.753  INFO 8704 --- [cluster-ClusterId{value='5eadffb58e2d163d8c5271ca', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:18:14.563  WARN 8704 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:18:14.563  INFO 8704 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:18:14.575  WARN 8704 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:18:14.576  INFO 8704 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:18:16.890  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:18:17.078  INFO 8704 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:18:17.079  INFO 8704 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:18:17.533  INFO 8704 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:18:17.535  INFO 8704 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:18:18.063  INFO 8704 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:18:18.357  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:18:18.358  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:18:18.358  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:18:18.358  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:18:18.358  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:18:18.359  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:18:18.359  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:18:18.891  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:18:18.897  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:18:18.906  INFO 8704 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:18:18.916  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588461498914 with initial instances count: 1
+2020-05-03 02:18:18.922  INFO 8704 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461498922, current=UP, previous=STARTING]
+2020-05-03 02:18:18.928  INFO 8704 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:18:19.090  INFO 8704 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:18:19.998  INFO 8704 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 14.543 seconds (JVM running for 15.905)
+2020-05-03 02:18:22.198  INFO 8704 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:18:28.456  INFO 8704 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:68}] to localhost:27017
+2020-05-03 02:18:28.472 ERROR 8704 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:21:33.530  WARN 8704 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461693530, current=DOWN, previous=UP]
+2020-05-03 02:21:33.531  INFO 8704 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:21:33.542  INFO 8704 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:21:33.553  INFO 8704 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:68}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:21:33.559  INFO 8704 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:21:36.564  INFO 8704 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:21:36.569  INFO 8704 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:21:36.588  INFO 8704 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:21:49.294  INFO 12888 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:21:52.810  INFO 12888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:21:52.811  INFO 12888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:21:53.175  INFO 12888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:21:53.768  INFO 12888 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:21:53.768  INFO 12888 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:21:53.902  INFO 12888 --- [cluster-ClusterId{value='5eae0091c867a51d88db7764', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:69}] to localhost:27017
+2020-05-03 02:21:53.924  INFO 12888 --- [cluster-ClusterId{value='5eae0091c867a51d88db7764', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10980100}
+2020-05-03 02:21:53.928  INFO 12888 --- [cluster-ClusterId{value='5eae0091c867a51d88db7764', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:21:54.754  WARN 12888 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:21:54.755  INFO 12888 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:21:54.768  WARN 12888 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:21:54.769  INFO 12888 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:21:56.991  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:21:57.190  INFO 12888 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:21:57.191  INFO 12888 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:21:57.559  INFO 12888 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:21:57.560  INFO 12888 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:21:57.948  INFO 12888 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:21:58.175  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:21:58.176  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:21:58.176  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:21:58.176  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:21:58.177  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:21:58.178  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:21:58.179  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:21:58.465  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:21:58.470  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:21:58.475  INFO 12888 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:21:58.484  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588461718481 with initial instances count: 1
+2020-05-03 02:21:58.488  INFO 12888 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461718487, current=UP, previous=STARTING]
+2020-05-03 02:21:58.492  INFO 12888 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:21:58.556  INFO 12888 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:21:59.098  INFO 12888 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 12.877 seconds (JVM running for 14.277)
+2020-05-03 02:22:02.815  INFO 12888 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:22:07.423  INFO 12888 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:70}] to localhost:27017
+2020-05-03 02:22:07.445 ERROR 12888 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:23:47.590  WARN 12888 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461827590, current=DOWN, previous=UP]
+2020-05-03 02:23:47.590  INFO 12888 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:23:47.597  INFO 12888 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:23:47.606  INFO 12888 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:70}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:23:47.610  INFO 12888 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:23:50.612  INFO 12888 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:23:50.626  INFO 12888 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:23:50.661  INFO 12888 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:24:19.225  INFO 10760 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:24:26.033  INFO 10760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:24:26.034  INFO 10760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:24:26.691  INFO 10760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:24:27.500  INFO 10760 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:24:27.501  INFO 10760 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:24:27.667  INFO 10760 --- [cluster-ClusterId{value='5eae012bd8abfa3a49ae2dfb', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:71}] to localhost:27017
+2020-05-03 02:24:27.678  INFO 10760 --- [cluster-ClusterId{value='5eae012bd8abfa3a49ae2dfb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5222500}
+2020-05-03 02:24:27.681  INFO 10760 --- [cluster-ClusterId{value='5eae012bd8abfa3a49ae2dfb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:24:28.663  WARN 10760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:24:28.664  INFO 10760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:24:28.682  WARN 10760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:24:28.683  INFO 10760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:24:31.885  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:24:32.218  INFO 10760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:24:32.219  INFO 10760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:24:32.601  INFO 10760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:24:32.602  INFO 10760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:24:33.145  INFO 10760 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:24:33.530  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:24:33.531  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:24:33.531  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:24:33.531  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:24:33.532  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:24:33.533  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:24:33.533  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:24:34.108  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:24:34.118  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:24:34.125  INFO 10760 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:24:34.139  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588461874135 with initial instances count: 1
+2020-05-03 02:24:34.143  INFO 10760 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588461874143, current=UP, previous=STARTING]
+2020-05-03 02:24:34.150  INFO 10760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:24:34.304  INFO 10760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:24:35.127  INFO 10760 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 20.846 seconds (JVM running for 24.419)
+2020-05-03 02:25:01.013  INFO 10760 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:25:01.211  INFO 10760 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:72}] to localhost:27017
+2020-05-03 02:25:01.230 ERROR 10760 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:27:32.720  WARN 10760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588462052720, current=DOWN, previous=UP]
+2020-05-03 02:27:32.720  INFO 10760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:27:32.734  INFO 10760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:27:32.745  INFO 10760 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:72}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:27:32.750  INFO 10760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:27:35.751  WARN 10760 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-05-03 02:27:35.751  INFO 10760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:27:35.760  INFO 10760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:27:35.791  INFO 10760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:27:47.865  INFO 17668 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:27:51.067  INFO 17668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:27:51.067  INFO 17668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:27:51.452  INFO 17668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:27:52.304  INFO 17668 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:27:52.305  INFO 17668 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:27:52.451  INFO 17668 --- [cluster-ClusterId{value='5eae01f8225bd2577a7406cb', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:73}] to localhost:27017
+2020-05-03 02:27:52.474  INFO 17668 --- [cluster-ClusterId{value='5eae01f8225bd2577a7406cb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13556199}
+2020-05-03 02:27:52.477  INFO 17668 --- [cluster-ClusterId{value='5eae01f8225bd2577a7406cb', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:27:53.381  WARN 17668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:27:53.382  INFO 17668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:27:53.394  WARN 17668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:27:53.395  INFO 17668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:27:56.265  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:27:56.439  INFO 17668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:27:56.440  INFO 17668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:27:56.798  INFO 17668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:27:56.798  INFO 17668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:27:57.177  INFO 17668 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:27:57.448  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:27:57.449  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:27:57.449  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:27:57.449  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:27:57.449  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:27:57.450  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:27:57.450  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:27:57.772  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:27:57.778  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:27:57.782  INFO 17668 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:27:57.814  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588462077796 with initial instances count: 1
+2020-05-03 02:27:57.817  INFO 17668 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588462077817, current=UP, previous=STARTING]
+2020-05-03 02:27:57.823  INFO 17668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:27:57.897  INFO 17668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:27:58.367  INFO 17668 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.61 seconds (JVM running for 15.213)
+2020-05-03 02:28:01.307  INFO 17668 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:28:01.474  INFO 17668 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:74}] to localhost:27017
+2020-05-03 02:28:01.491 ERROR 17668 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:32:57.455  INFO 17668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:36:18.902 ERROR 17668 --- [http-nio-8082-exec-10] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:37:57.462  INFO 17668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:42:30.710  WARN 17668 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588462950710, current=DOWN, previous=UP]
+2020-05-03 02:42:30.711  INFO 17668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:42:30.718  INFO 17668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:42:30.726  INFO 17668 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:74}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:42:30.732  INFO 17668 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:42:33.735  INFO 17668 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:42:33.744  INFO 17668 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:42:33.775  INFO 17668 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:42:53.119  INFO 12424 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:42:56.533  INFO 12424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:42:56.533  INFO 12424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:42:56.904  INFO 12424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:42:57.565  INFO 12424 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:42:57.566  INFO 12424 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:42:57.724  INFO 12424 --- [cluster-ClusterId{value='5eae0581df31f42ab4a54943', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:75}] to localhost:27017
+2020-05-03 02:42:57.737  INFO 12424 --- [cluster-ClusterId{value='5eae0581df31f42ab4a54943', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5779301}
+2020-05-03 02:42:57.740  INFO 12424 --- [cluster-ClusterId{value='5eae0581df31f42ab4a54943', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:42:58.542  WARN 12424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:42:58.543  INFO 12424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:42:58.552  WARN 12424 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:42:58.553  INFO 12424 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:43:02.273  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:43:02.510  INFO 12424 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:43:02.511  INFO 12424 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:43:02.824  INFO 12424 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:43:02.825  INFO 12424 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:43:03.202  INFO 12424 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:43:03.414  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:43:03.414  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:43:03.414  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:43:03.414  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:43:03.414  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:43:03.415  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:43:03.415  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:43:03.658  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:43:03.665  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:43:03.669  INFO 12424 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:43:03.677  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588462983674 with initial instances count: 1
+2020-05-03 02:43:03.679  INFO 12424 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588462983679, current=UP, previous=STARTING]
+2020-05-03 02:43:03.685  INFO 12424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:43:03.756  INFO 12424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:43:04.257  INFO 12424 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 14.514 seconds (JVM running for 16.24)
+2020-05-03 02:43:06.906  INFO 12424 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:43:07.086  INFO 12424 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:76}] to localhost:27017
+2020-05-03 02:47:17.978  WARN 12424 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463237978, current=DOWN, previous=UP]
+2020-05-03 02:47:17.980  INFO 12424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:47:17.987  INFO 12424 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:47:17.994  INFO 12424 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:76}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:47:17.999  INFO 12424 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:47:21.002  INFO 12424 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:47:21.015  INFO 12424 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:47:21.059  INFO 12424 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:47:35.005  INFO 13760 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:47:38.233  INFO 13760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:47:38.234  INFO 13760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:47:38.651  INFO 13760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:47:39.243  INFO 13760 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:47:39.243  INFO 13760 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:47:39.360  INFO 13760 --- [cluster-ClusterId{value='5eae069bae8e8b528465f3f7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:77}] to localhost:27017
+2020-05-03 02:47:39.372  INFO 13760 --- [cluster-ClusterId{value='5eae069bae8e8b528465f3f7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6162401}
+2020-05-03 02:47:39.375  INFO 13760 --- [cluster-ClusterId{value='5eae069bae8e8b528465f3f7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:47:40.192  WARN 13760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:47:40.193  INFO 13760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:47:40.204  WARN 13760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:47:40.205  INFO 13760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:47:42.661  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:47:42.833  INFO 13760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:47:42.833  INFO 13760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:47:43.199  INFO 13760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:47:43.199  INFO 13760 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:47:43.635  INFO 13760 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:47:43.941  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:47:43.942  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:47:43.942  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:47:43.943  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:47:43.943  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:47:43.943  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:47:43.943  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:47:44.299  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:47:44.304  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:47:44.310  INFO 13760 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:47:44.318  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588463264315 with initial instances count: 2
+2020-05-03 02:47:44.323  INFO 13760 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463264323, current=UP, previous=STARTING]
+2020-05-03 02:47:44.339  INFO 13760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:47:44.410  INFO 13760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:47:45.008  INFO 13760 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.143 seconds (JVM running for 14.711)
+2020-05-03 02:47:49.689  INFO 13760 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:47:49.916  INFO 13760 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:78}] to localhost:27017
+2020-05-03 02:47:49.947 ERROR 13760 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}; nested exception is com.mongodb.MongoCommandException: Command failed with error 17124 (Location17124): 'The argument to $size must be an array, but was of type: missing' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "The argument to $size must be an array, but was of type: missing", "code": 17124, "codeName": "Location17124"}
+2020-05-03 02:50:10.551  WARN 13760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463410551, current=DOWN, previous=UP]
+2020-05-03 02:50:10.551  INFO 13760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:50:10.562  INFO 13760 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:50:10.570  INFO 13760 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:78}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:50:10.579  INFO 13760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:50:13.581  INFO 13760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:50:13.595  INFO 13760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:50:13.627  INFO 13760 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:50:29.100  INFO 15636 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:50:32.509  INFO 15636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:50:32.509  INFO 15636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:50:32.970  INFO 15636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:50:34.006  INFO 15636 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:50:34.006  INFO 15636 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:50:34.139  INFO 15636 --- [cluster-ClusterId{value='5eae0749f5c7331d4ce077b2', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:79}] to localhost:27017
+2020-05-03 02:50:34.172  INFO 15636 --- [cluster-ClusterId{value='5eae0749f5c7331d4ce077b2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=27239400}
+2020-05-03 02:50:34.177  INFO 15636 --- [cluster-ClusterId{value='5eae0749f5c7331d4ce077b2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:50:35.001  WARN 15636 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:50:35.001  INFO 15636 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:50:35.015  WARN 15636 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:50:35.016  INFO 15636 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:50:37.338  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:50:37.517  INFO 15636 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:50:37.518  INFO 15636 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:50:37.875  INFO 15636 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:50:37.876  INFO 15636 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:50:38.237  INFO 15636 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:50:38.533  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:50:38.534  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:50:38.534  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:50:38.535  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:50:38.535  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:50:38.536  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:50:38.536  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:50:39.013  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:50:39.018  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:50:39.024  INFO 15636 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:50:39.033  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588463439030 with initial instances count: 1
+2020-05-03 02:50:39.036  INFO 15636 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463439036, current=UP, previous=STARTING]
+2020-05-03 02:50:39.044  INFO 15636 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:50:39.110  INFO 15636 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:50:39.728  INFO 15636 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.781 seconds (JVM running for 15.369)
+2020-05-03 02:50:46.208  INFO 15636 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:50:46.471  INFO 15636 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:80}] to localhost:27017
+2020-05-03 02:54:13.358  WARN 15636 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463653358, current=DOWN, previous=UP]
+2020-05-03 02:54:13.358  INFO 15636 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:54:13.364  INFO 15636 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:54:13.373  INFO 15636 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:80}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:54:13.377  INFO 15636 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:54:16.379  INFO 15636 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:54:16.393  INFO 15636 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:54:16.424  INFO 15636 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:54:34.129  INFO 13456 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:54:37.736  INFO 13456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:54:37.736  INFO 13456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:54:38.204  INFO 13456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:54:38.956  INFO 13456 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:54:38.957  INFO 13456 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:54:39.088  INFO 13456 --- [cluster-ClusterId{value='5eae083ed0f6a4283fbb4ce4', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:81}] to localhost:27017
+2020-05-03 02:54:39.142  INFO 13456 --- [cluster-ClusterId{value='5eae083ed0f6a4283fbb4ce4', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=48389800}
+2020-05-03 02:54:39.148  INFO 13456 --- [cluster-ClusterId{value='5eae083ed0f6a4283fbb4ce4', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:54:39.966  WARN 13456 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:54:39.966  INFO 13456 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:54:39.977  WARN 13456 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:54:39.977  INFO 13456 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:54:42.920  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:54:43.094  INFO 13456 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:54:43.095  INFO 13456 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:54:43.424  INFO 13456 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:54:43.424  INFO 13456 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:54:43.790  INFO 13456 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:54:44.138  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:54:44.139  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:54:44.139  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:54:44.139  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:54:44.139  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:54:44.140  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:54:44.140  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:54:44.614  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:54:44.619  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:54:44.626  INFO 13456 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:54:44.634  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588463684632 with initial instances count: 1
+2020-05-03 02:54:44.638  INFO 13456 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463684638, current=UP, previous=STARTING]
+2020-05-03 02:54:44.646  INFO 13456 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:54:44.726  INFO 13456 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:54:45.304  INFO 13456 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 15.258 seconds (JVM running for 17.324)
+2020-05-03 02:54:47.829  INFO 13456 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:54:47.944 ERROR 13456 --- [http-nio-8082-exec-1] c.w.w.controllers.MessageController      : Invalid reference 'summary'!
+2020-05-03 02:55:32.757  INFO 13456 --- [http-nio-8082-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:82}] to localhost:27017
+2020-05-03 02:56:14.920  WARN 13456 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463774920, current=DOWN, previous=UP]
+2020-05-03 02:56:14.920  INFO 13456 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:56:14.928  INFO 13456 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:56:14.933  INFO 13456 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:82}] to localhost:27017 because the pool has been closed.
+2020-05-03 02:56:14.939  INFO 13456 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 02:56:17.941  INFO 13456 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 02:56:17.953  INFO 13456 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 02:56:17.988  INFO 13456 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 02:56:30.663  INFO 10484 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 02:56:33.949  INFO 10484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 02:56:33.950  INFO 10484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 02:56:34.323  INFO 10484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 02:56:34.946  INFO 10484 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 02:56:34.946  INFO 10484 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 02:56:35.162  INFO 10484 --- [cluster-ClusterId{value='5eae08b247ec2f0f869e2d49', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:83}] to localhost:27017
+2020-05-03 02:56:35.178  INFO 10484 --- [cluster-ClusterId{value='5eae08b247ec2f0f869e2d49', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7905600}
+2020-05-03 02:56:35.181  INFO 10484 --- [cluster-ClusterId{value='5eae08b247ec2f0f869e2d49', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 02:56:35.908  WARN 10484 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:56:35.909  INFO 10484 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:56:35.918  WARN 10484 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 02:56:35.919  INFO 10484 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 02:56:38.421  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 02:56:38.630  INFO 10484 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 02:56:38.631  INFO 10484 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 02:56:38.980  INFO 10484 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 02:56:38.981  INFO 10484 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 02:56:39.380  INFO 10484 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 02:56:39.631  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 02:56:39.631  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 02:56:39.632  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 02:56:39.632  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 02:56:39.632  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 02:56:39.632  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 02:56:39.632  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 02:56:39.935  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 02:56:39.940  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 02:56:39.944  INFO 10484 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 02:56:39.952  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588463799949 with initial instances count: 1
+2020-05-03 02:56:39.959  INFO 10484 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588463799959, current=UP, previous=STARTING]
+2020-05-03 02:56:39.963  INFO 10484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 02:56:40.049  INFO 10484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 02:56:40.661  INFO 10484 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.291 seconds (JVM running for 14.756)
+2020-05-03 02:56:44.290  INFO 10484 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 02:56:44.485  INFO 10484 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:84}] to localhost:27017
+2020-05-03 03:01:39.636  INFO 10484 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:02:13.503  WARN 10484 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588464133503, current=DOWN, previous=UP]
+2020-05-03 03:02:13.503  INFO 10484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:02:13.508  INFO 10484 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:02:13.514  INFO 10484 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:84}] to localhost:27017 because the pool has been closed.
+2020-05-03 03:02:13.518  INFO 10484 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 03:02:16.520  INFO 10484 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 03:02:16.527  INFO 10484 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 03:02:16.549  INFO 10484 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 03:02:29.452  INFO 12640 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 03:02:32.740  INFO 12640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 03:02:32.741  INFO 12640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 03:02:33.090  INFO 12640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 03:02:33.670  INFO 12640 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 03:02:33.671  INFO 12640 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 03:02:33.799  INFO 12640 --- [cluster-ClusterId{value='5eae0a19d33ef21e9ebddbaa', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:85}] to localhost:27017
+2020-05-03 03:02:33.812  INFO 12640 --- [cluster-ClusterId{value='5eae0a19d33ef21e9ebddbaa', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5434400}
+2020-05-03 03:02:33.814  INFO 12640 --- [cluster-ClusterId{value='5eae0a19d33ef21e9ebddbaa', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 03:02:34.653  WARN 12640 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:02:34.653  INFO 12640 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:02:34.664  WARN 12640 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:02:34.664  INFO 12640 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:02:36.991  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 03:02:37.225  INFO 12640 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 03:02:37.225  INFO 12640 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 03:02:37.578  INFO 12640 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 03:02:37.579  INFO 12640 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 03:02:37.966  INFO 12640 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:02:38.273  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 03:02:38.274  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 03:02:38.274  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 03:02:38.274  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 03:02:38.274  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 03:02:38.274  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 03:02:38.275  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 03:02:38.689  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 03:02:38.694  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 03:02:38.701  INFO 12640 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 03:02:38.711  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588464158707 with initial instances count: 1
+2020-05-03 03:02:38.715  INFO 12640 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588464158715, current=UP, previous=STARTING]
+2020-05-03 03:02:38.722  INFO 12640 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:02:38.799  INFO 12640 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:02:39.313  INFO 12640 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 12.958 seconds (JVM running for 14.789)
+2020-05-03 03:02:55.380  INFO 12640 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 03:02:55.579  INFO 12640 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:86}] to localhost:27017
+2020-05-03 03:07:38.278  INFO 12640 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:12:38.280  INFO 12640 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:13:06.794  WARN 12640 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588464786794, current=DOWN, previous=UP]
+2020-05-03 03:13:06.795  INFO 12640 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:13:06.804  INFO 12640 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:13:06.815  INFO 12640 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:86}] to localhost:27017 because the pool has been closed.
+2020-05-03 03:13:06.819  INFO 12640 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 03:13:09.821  INFO 12640 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 03:13:09.822  WARN 12640 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-05-03 03:13:09.832  INFO 12640 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 03:13:09.865  INFO 12640 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 03:13:22.200  INFO 1776 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 03:13:25.431  INFO 1776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 03:13:25.432  INFO 1776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 03:13:25.789  INFO 1776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 03:13:26.406  INFO 1776 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 03:13:26.407  INFO 1776 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 03:13:26.574  INFO 1776 --- [cluster-ClusterId{value='5eae0ca6582dfe3175cc98ee', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:87}] to localhost:27017
+2020-05-03 03:13:26.590  INFO 1776 --- [cluster-ClusterId{value='5eae0ca6582dfe3175cc98ee', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8656200}
+2020-05-03 03:13:26.593  INFO 1776 --- [cluster-ClusterId{value='5eae0ca6582dfe3175cc98ee', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 03:13:27.541  WARN 1776 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:13:27.542  INFO 1776 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:13:27.552  WARN 1776 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:13:27.552  INFO 1776 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:13:30.103  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 03:13:30.467  INFO 1776 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 03:13:30.467  INFO 1776 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 03:13:30.795  INFO 1776 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 03:13:30.796  INFO 1776 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 03:13:31.308  INFO 1776 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:13:31.520  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 03:13:31.521  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 03:13:31.521  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 03:13:31.521  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 03:13:31.521  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 03:13:31.522  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 03:13:31.522  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 03:13:31.847  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 03:13:31.851  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 03:13:31.857  INFO 1776 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 03:13:31.865  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588464811863 with initial instances count: 1
+2020-05-03 03:13:31.869  INFO 1776 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588464811869, current=UP, previous=STARTING]
+2020-05-03 03:13:31.876  INFO 1776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:13:31.939  INFO 1776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:13:32.613  INFO 1776 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.484 seconds (JVM running for 15.092)
+2020-05-03 03:13:32.897  INFO 1776 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 03:13:33.218  INFO 1776 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:88}] to localhost:27017
+2020-05-03 03:18:31.528  INFO 1776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:23:31.531  INFO 1776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:23:40.723  WARN 1776 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588465420723, current=DOWN, previous=UP]
+2020-05-03 03:23:40.724  INFO 1776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:23:40.737  INFO 1776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:23:40.740  INFO 1776 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:88}] to localhost:27017 because the pool has been closed.
+2020-05-03 03:23:40.743  INFO 1776 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 03:23:43.747  INFO 1776 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 03:23:43.760  INFO 1776 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 03:23:43.795  INFO 1776 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 03:23:57.352  INFO 17808 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 03:24:00.854  INFO 17808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 03:24:00.855  INFO 17808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 03:24:01.224  INFO 17808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 03:24:01.850  INFO 17808 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 03:24:01.851  INFO 17808 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 03:24:02.066  INFO 17808 --- [cluster-ClusterId{value='5eae0f2167a5f06ddb61b069', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:89}] to localhost:27017
+2020-05-03 03:24:02.079  INFO 17808 --- [cluster-ClusterId{value='5eae0f2167a5f06ddb61b069', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5114599}
+2020-05-03 03:24:02.082  INFO 17808 --- [cluster-ClusterId{value='5eae0f2167a5f06ddb61b069', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 03:24:02.886  WARN 17808 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:24:02.887  INFO 17808 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:24:02.903  WARN 17808 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:24:02.903  INFO 17808 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:24:05.258  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 03:24:05.421  INFO 17808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 03:24:05.422  INFO 17808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 03:24:05.741  INFO 17808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 03:24:05.742  INFO 17808 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 03:24:06.111  INFO 17808 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:24:06.372  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 03:24:06.373  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 03:24:06.373  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 03:24:06.373  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 03:24:06.373  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 03:24:06.373  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 03:24:06.374  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 03:24:06.707  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 03:24:06.712  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 03:24:06.718  INFO 17808 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 03:24:06.727  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588465446724 with initial instances count: 1
+2020-05-03 03:24:06.736  INFO 17808 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588465446736, current=UP, previous=STARTING]
+2020-05-03 03:24:06.741  INFO 17808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:24:06.821  INFO 17808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:24:07.460  INFO 17808 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 13.286 seconds (JVM running for 14.883)
+2020-05-03 03:24:14.965  INFO 17808 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 03:24:15.103  INFO 17808 --- [http-nio-8082-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:90}] to localhost:27017
+2020-05-03 03:29:06.378  INFO 17808 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:33:04.179  WARN 17808 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588465984179, current=DOWN, previous=UP]
+2020-05-03 03:33:04.180  INFO 17808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:33:04.188  INFO 17808 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:33:04.192  INFO 17808 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:90}] to localhost:27017 because the pool has been closed.
+2020-05-03 03:33:04.197  INFO 17808 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 03:33:07.200  INFO 17808 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 03:33:07.200  WARN 17808 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-05-03 03:33:07.225  INFO 17808 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 03:33:07.241  INFO 17808 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-05-03 03:33:20.169  INFO 14444 --- [main] c.weiss.weissdata.WeissDataApplication   : No active profile set, falling back to default profiles: default
+2020-05-03 03:33:23.499  INFO 14444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 03:33:23.500  INFO 14444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-03 03:33:23.893  INFO 14444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-03 03:33:24.454  INFO 14444 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-05-03 03:33:24.454  INFO 14444 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2020-05-03 03:33:24.594  INFO 14444 --- [cluster-ClusterId{value='5eae11540c77194b1e680498', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:91}] to localhost:27017
+2020-05-03 03:33:24.609  INFO 14444 --- [cluster-ClusterId{value='5eae11540c77194b1e680498', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 3]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7422300}
+2020-05-03 03:33:24.612  INFO 14444 --- [cluster-ClusterId{value='5eae11540c77194b1e680498', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-05-03 03:33:25.414  WARN 14444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:33:25.414  INFO 14444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:33:25.429  WARN 14444 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 03:33:25.429  INFO 14444 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 03:33:27.826  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 03:33:28.021  INFO 14444 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 03:33:28.022  INFO 14444 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 03:33:28.409  INFO 14444 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 03:33:28.410  INFO 14444 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 03:33:28.729  INFO 14444 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 03:33:28.955  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 03:33:28.955  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 03:33:28.955  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 03:33:28.956  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 03:33:28.956  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 03:33:28.956  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 03:33:28.956  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 03:33:29.235  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 03:33:29.239  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 03:33:29.245  INFO 14444 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 03:33:29.250  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588466009248 with initial instances count: 2
+2020-05-03 03:33:29.252  INFO 14444 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588466009252, current=UP, previous=STARTING]
+2020-05-03 03:33:29.256  INFO 14444 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:33:29.333  INFO 14444 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:33:29.906  INFO 14444 --- [main] c.weiss.weissdata.WeissDataApplication   : Started WeissDataApplication in 12.949 seconds (JVM running for 14.354)
+2020-05-03 03:33:40.191  WARN 14444 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588466020191, current=DOWN, previous=UP]
+2020-05-03 03:33:40.192  INFO 14444 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082: registering service...
+2020-05-03 03:33:40.202  INFO 14444 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - registration status: 204
+2020-05-03 03:33:40.212  INFO 14444 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-05-03 03:33:43.215  INFO 14444 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-05-03 03:33:43.221  INFO 14444 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WEISS-DATA/DESKTOP-RBU34U8:weiss-data:8082 - deregister  status: 200
+2020-05-03 03:33:43.249  INFO 14444 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
