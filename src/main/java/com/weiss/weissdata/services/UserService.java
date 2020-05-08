@@ -19,15 +19,13 @@ public class UserService {
 
     public synchronized void addIfUserNotExist(UserInfo userInfo){
         Optional<UserInfo> byUsername = Optional.empty();
-        try {
-             byUsername = repository.findByLogin(userInfo.getLogin());
-        }catch (Exception e){
-            System.out.println("EXCEPTION"+ e.getMessage());
-        }
+        byUsername = repository.findByLogin(userInfo.getLogin());
         if(byUsername.isEmpty()){
-            System.out.println("ADD USER");
             repository.insert(userInfo);
-        };
+        }else {
+            throw new IllegalArgumentException("User already exist");
+        }
+
     }
 
 }

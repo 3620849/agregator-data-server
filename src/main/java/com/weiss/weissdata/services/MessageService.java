@@ -17,8 +17,15 @@ public class MessageService {
         repository.save(message);
     }
 
-    public List<Message> getListNewPost(long skip){
-        return  repository.getListNewPost(skip);
+    public List<Message> getListNewPost(String type,long skip){
+        List<Message> list = null;
+        switch (type) {
+            case "top": list= repository.getListTop(skip);break;
+            case "new":  list=repository.getListNewPost(skip);break;
+            case "monthly":list= repository.getListMonthly(skip);break;
+
+        }
+        return  list;
     }
 
     public boolean likeOrDislike(String messageId, Like like) {

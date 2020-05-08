@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface LikeRepository {
    boolean likeOrDislike(String messageId, Like like) ;
-   List<Message> getListNewPost(long skip);
+
 }

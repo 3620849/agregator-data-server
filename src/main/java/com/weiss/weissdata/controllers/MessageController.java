@@ -43,7 +43,7 @@ public class MessageController {
     public ResponseEntity<MessageListDto> getNewPostList(@RequestParam("type") String type, @RequestParam("skip") long skip){
         List<Message> messageList = null;
         try {
-             messageList = messageService.getListNewPost(skip);
+              messageList = messageService.getListNewPost(type,skip);
         }catch (Exception e){
             LOGGER.error(e.getMessage());
             return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);

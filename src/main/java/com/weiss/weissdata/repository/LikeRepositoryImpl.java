@@ -47,43 +47,5 @@ public class LikeRepositoryImpl implements LikeRepository {
         return modifiedCount>0?true:false;
     }
 
-    @Override
-    public List<Message> getListNewPost(long skip) {
-        MatchOperation match = Aggregation.match(Criteria.where("type").is("POST"));
-        SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
-        SkipOperation skip1 = Aggregation.skip(skip);
-        LimitOperation limit = Aggregation.limit(limitOfFeed);
-        GraphLookupOperation graph = Aggregation.graphLookup("message").
-                startWith("$_id").
-                connectFrom("_id").
-                connectTo("ancestorId").as("comments");
-        ProjectionOperation project = project("id", "time", "type", "content","userId","userName","userPhoto",
-                "clientId","header","shortContent")
-                .and("comments").size().as("summary.comment").
-                and(
-                        context -> {
-                            Document filterExpression = new Document();
-                            filterExpression.put("input", "$markList");
-                            filterExpression.put("as", "list");
-                            filterExpression.put("cond", new Document("$gt", Arrays.<Object>asList("$$list.value", 0)));
-                            return new Document("$filter", filterExpression);
-                        }
-                ).as("summary.likeArray").
-                and(context -> {
-                    Document filterExpression = new Document();
-                    filterExpression.put("input", "$markList");
-                    filterExpression.put("as", "list");
-                    filterExpression.put("cond", new Document("$lt", Arrays.<Object>asList("$$list.value", 0)));
-                    return new Document("$filter", filterExpression);
-                }).as("summary.dislikeArray");
-        ProjectionOperation project2 = project("id", "time", "type", "content","userId","userName","userPhoto",
-                "clientId","header","shortContent").
-                and("summary.comment").as("summary.comment").
-                and("summary.likeArray").size().as("summary.like").
-                and("summary.dislikeArray").size().as("summary.dislike");
-        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,skip1,limit,graph,project,project2);
-        AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
-        List<Message> mappedResults = aggregate.getMappedResults();
-        return mappedResults;
-    }
+
 }

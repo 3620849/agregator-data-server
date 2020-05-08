@@ -18,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-public class TstController {
+public class UserController {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
     @Autowired
     UserRepository repository;
@@ -43,7 +43,7 @@ public class TstController {
     public ResponseEntity getUsers(@RequestBody UserInfo userInfo){
         try {
             userService.addIfUserNotExist(userInfo);
-        }catch (Exception e){
+        }catch (IllegalArgumentException e){
             LOGGER.error(e.getMessage());
            return new ResponseEntity(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
