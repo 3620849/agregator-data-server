@@ -75,7 +75,7 @@ public class MessageRepositoryImpl implements MessageRepository {
     @Override
     public List<Message> getListTop(long skip) {
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST"));
-        LimitOperation limit = Aggregation.limit(limitOfFeed);
+        LimitOperation limit = Aggregation.limit(limitOfFeed+skip);
         GraphLookupOperation graph = graphComments();
         SkipOperation skip1 = Aggregation.skip(skip);
         ProjectionOperation project =getMessageProject().and(
@@ -104,9 +104,8 @@ public class MessageRepositoryImpl implements MessageRepository {
 
         ProjectionOperation project2 = walkArounBugProject().and("summary.likeRegArr").size().as("summary.likeReg")
                 .and("summary.likeAnonArr").size().as("summary.likeAnon");
-        SortOperation sortByLike = Aggregation.sort(Sort.by("summary.likeReg")
-                .descending().and(Sort.by("summary.likeAnon").descending()));
-        Aggregation aggregation = Aggregation.newAggregation(match,skip1,limit,graph,project,project2,sortByLike,includeAllFieldsProject());
+        SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
+        Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         List<Message> mappedResults = aggregate.getMappedResults();
         return mappedResults;
@@ -123,7 +122,6 @@ public class MessageRepositoryImpl implements MessageRepository {
 
     @Override
     public List<Message> getListMonthly(long skip) {
-        //TODO implement this method
         long monthAgo = new Date().getTime()-2592000000l;
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST").and("time").gt(monthAgo));
         LimitOperation limit = Aggregation.limit(limitOfFeed);
@@ -155,9 +153,8 @@ public class MessageRepositoryImpl implements MessageRepository {
 
         ProjectionOperation project2 = walkArounBugProject().and("summary.likeRegArr").size().as("summary.likeReg")
                 .and("summary.likeAnonArr").size().as("summary.likeAnon");
-        SortOperation sortByLike = Aggregation.sort(Sort.by("summary.likeReg")
-                .descending().and(Sort.by("summary.likeAnon").descending()));
-        Aggregation aggregation = Aggregation.newAggregation(match,skip1,limit,graph,project,project2,sortByLike,includeAllFieldsProject());
+        SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
+        Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,includeAllFieldsProject(),skip1,limit);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         List<Message> mappedResults = aggregate.getMappedResults();
         return mappedResults;
