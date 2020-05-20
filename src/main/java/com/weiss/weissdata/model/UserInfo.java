@@ -1,6 +1,7 @@
 package com.weiss.weissdata.model;
 
 
+import com.weiss.weissdata.model.forum.MyMark;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +23,8 @@ public class UserInfo {
     private String login;
     private String mail;
     private String photo;
+    private List<MyMark> markList;
+
     private boolean accountNonExpired;
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;

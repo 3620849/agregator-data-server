@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface LikeRepository {
    boolean likeOrDislike(String messageId, Like like) ;
-
 }

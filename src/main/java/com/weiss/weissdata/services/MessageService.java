@@ -1,8 +1,11 @@
 package com.weiss.weissdata.services;
 
 import com.weiss.weissdata.model.forum.Like;
+import com.weiss.weissdata.model.forum.LikeType;
 import com.weiss.weissdata.model.forum.Message;
+import com.weiss.weissdata.model.forum.MyMark;
 import com.weiss.weissdata.repository.PostRepository;
+import com.weiss.weissdata.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +13,8 @@ import java.util.List;
 
 @Service
 public class MessageService {
+    @Autowired
+    UserRepository userRepository;
     @Autowired
     PostRepository repository;
 
@@ -29,6 +34,15 @@ public class MessageService {
     }
 
     public boolean likeOrDislike(String messageId, Like like) {
+        if(like.getLikeType()== LikeType.REGISTERED){
+            MyMark myMark = new MyMark();
+            myMark.setMessageId(messageId);
+            myMark.setClientId(like.getClientId());
+            myMark.setUserId(like.getUserId());
+            myMark.setValue(like.getValue());
+            myMark.setTime(like.getTime());
+            userRepository.addToMyList(myMark);
+        }
         return repository.likeOrDislike( messageId, like);
     }
 }

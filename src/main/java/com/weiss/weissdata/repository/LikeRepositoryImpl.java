@@ -38,7 +38,7 @@ public class LikeRepositoryImpl implements LikeRepository {
         long modifiedCount = updateResult.getModifiedCount();
         if(modifiedCount==0L){
             query = new Query();
-            query.addCriteria(Criteria.where("id").is(messageId));//"5eac71e4d95f4f73289f3b4b"
+            query.addCriteria(Criteria.where("id").is(messageId));
             update = new Update();
             update.push("markList", like);
             updateResult = mongoTemplate.updateFirst(query, update, Message.class);
