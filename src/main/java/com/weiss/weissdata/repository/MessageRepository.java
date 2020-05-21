@@ -8,4 +8,5 @@ public interface MessageRepository {
     List<Message> getListNewPost(long skip);
     List<Message> getListTop(long skip);
     List<Message> getListMonthly(long skip);
+    List<Message> getMessageListByIdWithMetaData(String[] ids);
 }

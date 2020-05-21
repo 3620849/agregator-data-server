@@ -8,6 +8,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.*;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.util.StreamUtils;
+import org.springframework.data.util.Streamable;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -107,8 +109,7 @@ public class MessageRepositoryImpl implements MessageRepository {
         SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
         Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
-        List<Message> mappedResults = aggregate.getMappedResults();
-        return mappedResults;
+        return aggregate.getMappedResults();
     }
 
     private AggregationOperation includeAllFieldsProject() {
@@ -122,7 +123,7 @@ public class MessageRepositoryImpl implements MessageRepository {
 
     @Override
     public List<Message> getListMonthly(long skip) {
-        long monthAgo = new Date().getTime()-2592000000l;
+        long monthAgo = new Date().getTime()-2592000000L;
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST").and("time").gt(monthAgo));
         LimitOperation limit = Aggregation.limit(limitOfFeed);
         GraphLookupOperation graph = graphComments();
@@ -156,7 +157,19 @@ public class MessageRepositoryImpl implements MessageRepository {
         SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
         Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,includeAllFieldsProject(),skip1,limit);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
-        List<Message> mappedResults = aggregate.getMappedResults();
-        return mappedResults;
+        return aggregate.getMappedResults();
+    }
+
+    public List<Message> getMessageListByIdWithMetaData(String[] ids){
+        MatchOperation match = Aggregation.match(new Criteria("_id")
+                .in(Streamable.of(ids).stream().collect(StreamUtils.toUnmodifiableList())));
+        SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
+        LimitOperation limit = Aggregation.limit(limitOfFeed);
+        GraphLookupOperation graph = graphComments();
+        ProjectionOperation project =getMessageProject();
+        ProjectionOperation project2 = walkArounBugProject();
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,graph,project,project2);
+        AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
+        return aggregate.getMappedResults();
     }
 }

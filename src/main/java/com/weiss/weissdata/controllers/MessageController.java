@@ -21,7 +21,7 @@ public class MessageController {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
     @Autowired
     MessageService messageService;
-    @RequestMapping(value = "/message",method = RequestMethod.POST)
+    @RequestMapping(value = "/message",method = RequestMethod.PUT)
     public ResponseEntity savePost(@RequestBody Message message){
         try {
             sanitize(message);
@@ -73,5 +73,16 @@ public class MessageController {
             return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity(res,HttpStatus.OK);
+    }
+    @RequestMapping(value = "/message",method = RequestMethod.POST)
+    public ResponseEntity<MessageListDto> getMessageListById(@RequestBody ListMessages idList){
+        List<Message> messageList = null;
+        try {
+            messageList = messageService.getMessageListById(idList);
+        }catch (Exception e){
+            LOGGER.error(e.getMessage());
+            return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity(MessageListDto.builder().messageList(messageList).build(),HttpStatus.OK);
     }
 }
