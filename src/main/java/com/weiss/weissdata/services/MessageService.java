@@ -50,4 +50,8 @@ public class MessageService {
     public  List<Message> getMessageListById(ListMessages idList) {
         return repository.getMessageListByIdWithMetaData(idList.getIdsList());
     }
+
+    public List<Message> getMessageListByUserId(String userId, long skip) {
+        return repository.getMessageListByUserId(userId,skip);
+    }
 }

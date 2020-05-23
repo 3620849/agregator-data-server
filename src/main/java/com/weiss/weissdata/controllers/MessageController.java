@@ -50,6 +50,19 @@ public class MessageController {
         }
         return new ResponseEntity(MessageListDto.builder().messageList(messageList).build(),HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/user/message",method = RequestMethod.GET)
+    public ResponseEntity<MessageListDto> getMessageByUserId(@RequestParam("userId") String userId, @RequestParam("skip") long skip){
+        List<Message> messageList = null;
+        try {
+            messageList = messageService.getMessageListByUserId(userId,skip);
+        }catch (Exception e){
+            LOGGER.error(e.getMessage());
+            return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity(MessageListDto.builder().messageList(messageList).build(),HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/likeOrDislike",method = RequestMethod.GET)
     public ResponseEntity likeOrDislike(@RequestParam("messageId") String messageId,
                                         @RequestParam(value = "userId" ,required = false) String userId,

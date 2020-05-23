@@ -172,4 +172,18 @@ public class MessageRepositoryImpl implements MessageRepository {
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         return aggregate.getMappedResults();
     }
+
+    @Override
+    public List<Message> getMessageListByUserId(String userId, long skip) {
+        MatchOperation match = Aggregation.match(Criteria.where("userId").is(userId));
+        SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
+        LimitOperation limit = Aggregation.limit(limitOfFeed);
+        SkipOperation skip1 = Aggregation.skip(skip);
+        GraphLookupOperation graph = graphComments();
+        ProjectionOperation project =getMessageProject();
+        ProjectionOperation project2 = walkArounBugProject();
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,graph,project,project2,skip1,limit);
+        AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
+        return aggregate.getMappedResults();
+    }
 }
