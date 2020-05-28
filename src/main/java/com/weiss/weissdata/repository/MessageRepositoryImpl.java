@@ -2,6 +2,7 @@ package com.weiss.weissdata.repository;
 
 import com.weiss.weissdata.model.forum.Message;
 import org.bson.Document;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Sort;
@@ -29,32 +30,34 @@ public class MessageRepositoryImpl implements MessageRepository {
         SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
         SkipOperation skip1 = Aggregation.skip(skip);
         LimitOperation limit = Aggregation.limit(limitOfFeed);
-        GraphLookupOperation graph = graphComments();
+        LookupOperation lookup = lookupComments();
         ProjectionOperation project =getMessageProject();
         ProjectionOperation project2 = walkArounBugProject();
-        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,skip1,limit,graph,project,project2);
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,skip1,limit,lookup,project,project2);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         List<Message> mappedResults = aggregate.getMappedResults();
         return mappedResults;
     }
 
     private GraphLookupOperation graphComments() {
-        return Aggregation.graphLookup("message").
-                startWith("$_id").
-                connectFrom("_id").
-                connectTo("ancestorId").as("comments");
+        return Aggregation.graphLookup("message")
+                .startWith("$_id")
+                .connectFrom("_id")
+                .connectTo("ancestorId").maxDepth(0).as("comments");
     }
-
+    private LookupOperation lookupComments() {
+        return Aggregation.lookup("message","_id","parentPostId","comments");
+    }
     private ProjectionOperation walkArounBugProject() {
         return project("id", "time", "type", "content","userId","userName","userPhoto",
-                "clientId","header","shortContent").
+                "clientId","header","shortContent","parentPostId","ancestorId").
                 and("summary.comment").as("summary.comment").and("summary.likeArray").size().as("summary.like")
                 .and("summary.dislikeArray").size().as("summary.dislike");
     }
 
     private ProjectionOperation getMessageProject() {
         return project("id", "time", "type", "content","userId","userName","userPhoto",
-                "clientId","header","shortContent")
+                "clientId","header","shortContent","parentPostId","ancestorId")
                 .and("comments").size().as("summary.comment").
                         and(
                                 context -> {
@@ -78,7 +81,7 @@ public class MessageRepositoryImpl implements MessageRepository {
     public List<Message> getListTop(long skip) {
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST"));
         LimitOperation limit = Aggregation.limit(limitOfFeed+skip);
-        GraphLookupOperation graph = graphComments();
+        LookupOperation lookup = lookupComments();
         SkipOperation skip1 = Aggregation.skip(skip);
         ProjectionOperation project =getMessageProject().and(
                 context -> {
@@ -107,7 +110,7 @@ public class MessageRepositoryImpl implements MessageRepository {
         ProjectionOperation project2 = walkArounBugProject().and("summary.likeRegArr").size().as("summary.likeReg")
                 .and("summary.likeAnonArr").size().as("summary.likeAnon");
         SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
-        Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
+        Aggregation aggregation = Aggregation.newAggregation(match,lookup,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         return aggregate.getMappedResults();
     }
@@ -126,7 +129,7 @@ public class MessageRepositoryImpl implements MessageRepository {
         long monthAgo = new Date().getTime()-2592000000L;
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST").and("time").gt(monthAgo));
         LimitOperation limit = Aggregation.limit(limitOfFeed);
-        GraphLookupOperation graph = graphComments();
+        LookupOperation lookup = lookupComments();
         SkipOperation skip1 = Aggregation.skip(skip);
         ProjectionOperation project =getMessageProject().and(
                 context -> {
@@ -155,22 +158,22 @@ public class MessageRepositoryImpl implements MessageRepository {
         ProjectionOperation project2 = walkArounBugProject().and("summary.likeRegArr").size().as("summary.likeReg")
                 .and("summary.likeAnonArr").size().as("summary.likeAnon");
         SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
-        Aggregation aggregation = Aggregation.newAggregation(match,graph,project,project2,sortByLike,includeAllFieldsProject(),skip1,limit);
+        Aggregation aggregation = Aggregation.newAggregation(match,lookup,project,project2,sortByLike,includeAllFieldsProject(),skip1,limit);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         return aggregate.getMappedResults();
     }
 
-    public List<Message> getMessageListByIdWithMetaData(String[] ids){
+    public List<Message> getMessageListByIdWithMetaData(String[] ids ){
         MatchOperation match = Aggregation.match(new Criteria("_id")
                 .in(Streamable.of(ids).stream().collect(StreamUtils.toUnmodifiableList())));
         SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
-        LimitOperation limit = Aggregation.limit(limitOfFeed);
-        GraphLookupOperation graph = graphComments();
+        LookupOperation lookup = lookupComments();
         ProjectionOperation project =getMessageProject();
         ProjectionOperation project2 = walkArounBugProject();
-        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,graph,project,project2);
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,lookup,project,project2);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
-        return aggregate.getMappedResults();
+        List<Message> mappedResults = aggregate.getMappedResults();
+        return mappedResults;
     }
 
     @Override
@@ -179,11 +182,24 @@ public class MessageRepositoryImpl implements MessageRepository {
         SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
         LimitOperation limit = Aggregation.limit(limitOfFeed);
         SkipOperation skip1 = Aggregation.skip(skip);
-        GraphLookupOperation graph = graphComments();
+        LookupOperation lookup = lookupComments();
         ProjectionOperation project =getMessageProject();
         ProjectionOperation project2 = walkArounBugProject();
-        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,graph,project,project2,skip1,limit);
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,lookup,project,project2,skip1,limit);
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         return aggregate.getMappedResults();
+    }
+    @Override
+    public List<Message> getCommentsByParentId(String parentId){
+        MatchOperation match = Aggregation.match(new Criteria("parentPostId")
+                .in(Streamable.of(new ObjectId(parentId)).stream().collect(StreamUtils.toUnmodifiableList())));
+        SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
+        GraphLookupOperation lookup = graphComments();
+        ProjectionOperation project =getMessageProject().and("comments").as("comments");
+        ProjectionOperation project2 = walkArounBugProject().and("comments").as("comments");
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,lookup,project,project2);
+        AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
+        List<Message> mappedResults = aggregate.getMappedResults();
+        return mappedResults;
     }
 }
