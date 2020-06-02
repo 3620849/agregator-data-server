@@ -23,6 +23,8 @@ public class MessageRepositoryImpl implements MessageRepository {
     private MongoTemplate mongoTemplate;
     @Value("${limitOfFeed}")
     private long limitOfFeed;
+    @Value("${selectionLimitFeed}")
+    private long selectionLimitFeed;
 
     @Override
     public List<Message> getListNewPost(long skip) {
@@ -80,7 +82,15 @@ public class MessageRepositoryImpl implements MessageRepository {
     @Override
     public List<Message> getListTop(long skip) {
         MatchOperation match = Aggregation.match(Criteria.where("type").is("POST"));
+        SortOperation sortByTime = Aggregation.sort(Sort.by("time").descending());
+        long preSkip = 0;
+        if(skip>= selectionLimitFeed){
+            preSkip=skip/ selectionLimitFeed * selectionLimitFeed;
+            skip=skip-preSkip;
+        }
         LimitOperation limit = Aggregation.limit(limitOfFeed+skip);
+        SkipOperation preSkipOp = Aggregation.skip(preSkip);
+        LimitOperation selectionLimit = Aggregation.limit(selectionLimitFeed +preSkip);
         LookupOperation lookup = lookupComments();
         SkipOperation skip1 = Aggregation.skip(skip);
         ProjectionOperation project =getMessageProject().and(
@@ -110,7 +120,7 @@ public class MessageRepositoryImpl implements MessageRepository {
         ProjectionOperation project2 = walkArounBugProject().and("summary.likeRegArr").size().as("summary.likeReg")
                 .and("summary.likeAnonArr").size().as("summary.likeAnon");
         SortOperation sortByLike = Aggregation.sort(Sort.Direction.DESC,"summary.likeReg","summary.likeAnon","time");
-        Aggregation aggregation = Aggregation.newAggregation(match,lookup,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
+        Aggregation aggregation = Aggregation.newAggregation(match,sortByTime,preSkipOp,selectionLimit,lookup,project,project2,sortByLike,skip1,limit,includeAllFieldsProject());
         AggregationResults<Message> aggregate = mongoTemplate.aggregate(aggregation,"message", Message.class);
         return aggregate.getMappedResults();
     }
