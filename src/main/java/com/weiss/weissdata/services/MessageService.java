@@ -83,4 +83,9 @@ public class MessageService {
         //put inside messages 0 level with ancestor id equals post id
         return resultList;
     }
+
+    public boolean removeMessageById(String messageId) {
+        repository.deleteById(messageId);
+        return true;
+    }
 }

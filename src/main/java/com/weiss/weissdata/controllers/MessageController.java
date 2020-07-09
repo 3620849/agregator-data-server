@@ -63,6 +63,18 @@ public class MessageController {
         return new ResponseEntity(MessageListDto.builder().messageList(messageList).build(),HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/user/message/{messageId}",method = RequestMethod.DELETE)
+    public ResponseEntity<MessageListDto> removeMessageById(@PathVariable("messageId") String messageId){
+        boolean res = false;
+        try {
+            res= messageService.removeMessageById(messageId);
+        }catch (Exception e){
+            LOGGER.error(e.getMessage());
+            return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity(res, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/likeOrDislike",method = RequestMethod.GET)
     public ResponseEntity likeOrDislike(@RequestParam("messageId") String messageId,
                                         @RequestParam(value = "userId" ,required = false) String userId,
